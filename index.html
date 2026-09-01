@@ -17,6 +17,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Cody Ni","jobTitle":"Product Marketing Manager","address":{"@type":"PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA"},"url":"https://codyni123.github.io","sameAs":["https://www.linkedin.com/in/codyni123","https://github.com/codyni123"]}
+  </script>
 </head>
 <body>
 
@@ -24,10 +27,10 @@
     <div class="container">
       <a class="wordmark" href="index.html">Cody Ni<span class="wm-tail"> — Portfolio</span></a>
       <nav class="site-nav" aria-label="Main">
-        <a href="index.html#work">Work</a>
+        <a href="index.html#projects">Projects</a>
         <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
         <a href="resume.html">Experience</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -36,21 +39,18 @@
 
     <!-- hero -->
     <section class="hero container">
-      <div class="hero-eyebrow">
+      <div class="hero-eyebrow fade-up">
         <span class="label"><span class="dot"></span>Open to PMM roles</span>
         <span class="label">Los Angeles, CA</span>
       </div>
-      <h1>
-        <span class="line-mask"><span style="--d:.05s">Cody Ni markets</span></span>
-        <span class="line-mask"><span style="--d:.18s">products, <span class="muted">ships apps.</span></span></span>
-      </h1>
+      <h1 class="fade-up" style="--d:.08s">Cody Ni markets<br>products, <span class="muted">ships apps.</span></h1>
       <div class="hero-row">
-        <p class="hero-lede reveal">
+        <p class="hero-lede fade-up" style="--d:.18s">
           Product marketing manager — most recently driving SMB ads growth at TikTok —
           with a builder's habit: <strong>three iOS apps</strong> designed, built, and
           launched solo, from first sketch to the App Store.
         </p>
-        <div class="hero-photo-wrap reveal">
+        <div class="hero-photo-wrap fade-up" style="--d:.26s">
           <div class="polaroid">
             <div class="polaroid-fallback">cn</div>
             <img class="photo" src="assets/photo.jpg" alt="Cody Ni" onerror="this.remove()">
@@ -80,11 +80,10 @@
       </div>
     </div>
 
-    <!-- selected work -->
-    <section class="work container" id="work">
+    <!-- projects -->
+    <section class="work container" id="projects">
       <div class="section-head reveal">
-        <h2>Selected work</h2>
-
+        <h2>Projects</h2>
       </div>
       <div class="work-list">
 
@@ -95,7 +94,7 @@
           <div class="work-copy">
             <h3>Red 10</h3>
             <p>Big Two with hidden teams — a six-player card game taken from first sketch to the App Store.</p>
-            <div class="work-tags"><span class="tag">iOS</span><span class="tag">Card game</span><span class="tag">Live</span></div>
+            <div class="work-tags"><span class="tag">iOS</span><span class="tag">Card game</span><span class="tag">Live</span><a class="tag tag-link" href="https://apps.apple.com/app/id6762503277" target="_blank" rel="noopener">App Store ↗</a></div>
           </div>
           <span class="go">→</span>
         </article>
@@ -107,7 +106,7 @@
           <div class="work-copy">
             <h3>Liar's Dice</h3>
             <p>The classic bluffing game, rebuilt native — five AI personalities, private rooms, no ads.</p>
-            <div class="work-tags"><span class="tag">iOS</span><span class="tag">Board game</span><span class="tag">Live</span></div>
+            <div class="work-tags"><span class="tag">iOS</span><span class="tag">Board game</span><span class="tag">Live</span><a class="tag tag-link" href="https://apps.apple.com/app/id6767948698" target="_blank" rel="noopener">App Store ↗</a></div>
           </div>
           <span class="go">→</span>
         </article>
@@ -119,7 +118,7 @@
           <div class="work-copy">
             <h3>Cardful</h3>
             <p>A credit-card rewards copilot — the best card at checkout, credits caught before they expire.</p>
-            <div class="work-tags"><span class="tag">iOS</span><span class="tag">Finance</span><span class="tag">Live</span></div>
+            <div class="work-tags"><span class="tag">iOS</span><span class="tag">Finance</span><span class="tag">Live</span><a class="tag tag-link" href="https://apps.apple.com/us/app/cardful-credit-card-rewards/id6776520049" target="_blank" rel="noopener">App Store ↗</a></div>
           </div>
           <span class="go">→</span>
         </article>
@@ -144,6 +143,11 @@
           <p>Every listing, launch, and price on these pages was a marketing decision first. The apps are the proof of craft.</p>
         </div>
       </div>
+
+      <div class="home-cta reveal">
+        <a class="btn btn--ghost" href="about.html">More about me <span class="arrow">→</span></a>
+        <a class="btn btn--ghost" href="resume.html">Experience <span class="arrow">→</span></a>
+      </div>
     </section>
 
   </main>
@@ -159,9 +163,7 @@
         <div class="footer-links">
           <a href="https://www.linkedin.com/in/codyni123" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/codyni123" target="_blank" rel="noopener">GitHub</a>
-          <a href="resume.html">Experience →</a>
         </div>
-        <span class="label">Hosted on GitHub Pages</span>
       </div>
     </div>
   </footer>
