@@ -378,8 +378,6 @@ h1 .muted { color: var(--ink-3); }
 
 .section-head h2 { font-size: clamp(28px, 3.6vw, 44px); letter-spacing: -0.025em; }
 
-.section-head .count { font-family: var(--font-mono); font-size: 13px; color: var(--ink-3); }
-
 .work-list { border-top: 1px solid var(--line); }
 
 .work-row {
@@ -610,8 +608,6 @@ h1 .muted { color: var(--ink-3); }
 .case-next a.next-link .arrow { transition: transform 0.3s var(--ease-out); }
 .case-next a.next-link:hover { color: var(--red); }
 .case-next a.next-link:hover .arrow { transform: translateX(6px); }
-
-.case-next .counter { font-family: var(--font-mono); font-size: 13px; color: var(--ink-3); }
 
 /* ---------- about ---------- */
 
