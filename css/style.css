@@ -681,15 +681,34 @@ a.tag-link:hover { border-color: var(--ink); color: var(--paper); background: va
 
 .exp-row .years { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; color: var(--ink-3); white-space: nowrap; }
 
-/* toolkit + currently */
-.about-cols {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(28px, 5vw, 72px);
+/* "currently" panel — the page's closing statement */
+.now-panel {
   margin-top: clamp(48px, 7vw, 84px);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 28px 48px;
+  align-items: end;
+  padding: clamp(28px, 4vw, 44px) clamp(24px, 3.5vw, 40px);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background:
+    radial-gradient(90% 130% at 100% 0%, rgba(194, 64, 47, 0.08), transparent 55%),
+    var(--paper-raised);
 }
 
-.about-cols .label { display: block; margin-bottom: 18px; }
+.now-panel .label { display: block; margin-bottom: 16px; }
+
+.now-title {
+  font-size: clamp(22px, 2.6vw, 32px);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  max-width: 20em;
+  margin-bottom: 10px;
+}
+
+.now-panel p { color: var(--ink-2); max-width: 520px; }
+
+.now-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
 .toolkit { display: flex; flex-wrap: wrap; gap: 9px; }
 
@@ -697,8 +716,6 @@ a.tag-link:hover { border-color: var(--ink); color: var(--paper); background: va
 
 .toolkit .tag { transition: border-color 0.25s, color 0.25s, background 0.25s; }
 .toolkit .tag:hover { border-color: var(--ink); background: var(--ink); color: var(--paper); }
-
-.currently p { color: var(--ink-2); max-width: 430px; }
 
 /* ---------- contact ---------- */
 
@@ -711,7 +728,6 @@ a.tag-link:hover { border-color: var(--ink); color: var(--paper); background: va
   line-height: 0.98;
   letter-spacing: -0.04em;
 }
-
 
 .contact-lede { max-width: 520px; margin-top: clamp(24px, 3.6vw, 38px); font-size: clamp(17px, 1.6vw, 20px); color: var(--ink-2); }
 
@@ -807,7 +823,6 @@ a.tag-link:hover { border-color: var(--ink); color: var(--paper); background: va
   .case-body .label { padding-top: 0; }
   .about-grid { grid-template-columns: 1fr; }
   .about-photo { justify-self: start; margin-top: 10px; }
-  .about-cols { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
