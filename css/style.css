@@ -289,6 +289,100 @@ h1 .muted { color: var(--ink-3); }
   z-index: -1;
 }
 
+.hero-eyebrow { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-bottom: clamp(26px, 4vw, 44px); }
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 96px);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+
+
+.hero-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(28px, 5vw, 64px);
+  margin-top: clamp(30px, 5vw, 54px);
+}
+
+.hero-lede {
+  max-width: 470px;
+  font-size: clamp(17px, 1.6vw, 19.5px);
+  color: var(--ink-2);
+}
+
+.hero-photo-wrap { position: relative; flex: none; }
+
+.polaroid {
+  position: relative;
+  width: clamp(150px, 19vw, 216px);
+  aspect-ratio: 21 / 26;
+  border-radius: 14px;
+  overflow: hidden;
+  transform: rotate(2.5deg);
+  border: 1px solid var(--line);
+  background: var(--paper-raised);
+  box-shadow: 0 18px 40px -18px rgba(27, 25, 23, 0.4);
+  transition: transform 0.45s var(--ease-out);
+}
+
+.polaroid:hover { transform: rotate(0.4deg) translateY(-3px); }
+
+.polaroid img.photo {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.polaroid-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px 15px 13px;
+  background:
+    radial-gradient(120% 80% at 85% 0%, rgba(194, 64, 47, 0.42), transparent 60%),
+    var(--ink);
+  color: var(--paper);
+}
+
+.polaroid-fallback .pf-label {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(240, 238, 233, 0.62);
+}
+
+.polaroid-fallback .pf-mono {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(38px, 4.4vw, 54px);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.photo-caption {
+  position: absolute;
+  bottom: 16px;
+  right: calc(100% + 14px);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+/* inline text link */
+.tlink { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; transition: color 0.25s; }
+.tlink:hover { color: var(--red); }
+
 /* ---------- marquee ---------- */
 
 .marquee {
