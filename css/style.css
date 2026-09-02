@@ -96,8 +96,6 @@ p:last-child { margin-bottom: 0; }
   color: var(--ink-2);
 }
 
-.label--dark { color: var(--ink); }
-
 /* two-tone accent inside display type */
 h1 .muted { color: var(--ink-3); }
 
@@ -196,6 +194,8 @@ h1 .muted { color: var(--ink-3); }
 }
 
 .site-footer .label { color: rgba(240, 238, 233, 0.5); }
+
+.site-footer--slim { padding-top: 34px; }
 
 .footer-cta { margin-bottom: clamp(44px, 6vw, 72px); }
 
@@ -754,10 +754,6 @@ a.tag-link:hover { border-color: var(--ink); color: var(--paper); background: va
 .about-photo .polaroid:hover { transform: rotate(-0.4deg) translateY(-3px); }
 
 /* experience */
-.exp { margin-top: clamp(56px, 8vw, 96px); }
-
-.exp .label { display: block; margin-bottom: 8px; }
-
 .exp-list { border-top: 1px solid var(--line); }
 
 .exp-row {
@@ -777,7 +773,7 @@ a.tag-link:hover { border-color: var(--ink); color: var(--paper); background: va
 
 /* "currently" panel — the page's closing statement */
 .now-panel {
-  margin-top: clamp(48px, 7vw, 84px);
+  margin-top: clamp(64px, 9vw, 120px);
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 28px 48px;
@@ -917,6 +913,7 @@ a.tag-link:hover { border-color: var(--ink); color: var(--paper); background: va
   .case-body .label { padding-top: 0; }
   .about-grid { grid-template-columns: 1fr; }
   .about-photo { justify-self: start; margin-top: 10px; }
+  .now-panel { grid-template-columns: 1fr; align-items: start; }
 }
 
 @media (max-width: 560px) {

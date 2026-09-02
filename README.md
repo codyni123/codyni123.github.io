@@ -18,9 +18,10 @@ GitHub Pages serves the repo root directly.
 
 ## Editing notes
 
-- **Add a photo:** drop a portrait at `assets/photo.jpg` (portrait orientation, ~800px wide
-  is plenty). The home and about pages pick it up automatically; until then a monogram
-  placeholder shows.
+- **Add a photo:** save a portrait as `assets/photo.jpg` (portrait orientation, ~800px wide
+  is plenty), then in `index.html` and `about.html` add this line inside the
+  `<div class="polaroid">`, right after the placeholder div:
+  `<img class="photo" src="assets/photo.jpg" alt="Cody Ni">`
 - **Add a project:** copy one of the case-study pages, add a row in `index.html`, and wire
   the "Next project" links so the cycle stays closed.
 
