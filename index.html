@@ -52,12 +52,13 @@
         </p>
         <div class="hero-photo-wrap fade-up" style="--d:.26s">
           <div class="polaroid">
-            <div class="polaroid-fallback">cn</div>
+            <div class="polaroid-fallback"><span class="pf-label">Cody Ni ✦ LA</span><span class="pf-mono">cn</span><span class="pf-label">ships apps</span></div>
             <img class="photo" src="assets/photo.jpg" alt="Cody Ni" onerror="this.remove()">
           </div>
           <span class="photo-caption">that's me →</span>
         </div>
       </div>
+      <div class="scroll-cue fade-up" style="--d:.5s" aria-hidden="true"><span class="label">Scroll</span><span class="cue-line"></span></div>
     </section>
 
     <!-- marquee -->
@@ -87,7 +88,7 @@
       </div>
       <div class="work-list">
 
-        <article class="work-row reveal">
+        <article class="work-row reveal" data-preview="assets/red10-table.jpg">
           <a class="cover" href="red-10.html" aria-label="Red 10 case study"></a>
           <span class="num">01</span>
           <div class="work-icon"><img src="assets/icon-red10.png" alt="" loading="lazy"></div>
@@ -99,7 +100,7 @@
           <span class="go">→</span>
         </article>
 
-        <article class="work-row reveal">
+        <article class="work-row reveal" data-preview="assets/ld-hero.jpg">
           <a class="cover" href="liars-dice.html" aria-label="Liar's Dice case study"></a>
           <span class="num">02</span>
           <div class="work-icon"><img src="assets/icon-liarsdice.png" alt="" loading="lazy"></div>
@@ -111,7 +112,7 @@
           <span class="go">→</span>
         </article>
 
-        <article class="work-row reveal">
+        <article class="work-row reveal" data-preview="assets/cf-hero.jpg">
           <a class="cover" href="cardful.html" aria-label="Cardful case study"></a>
           <span class="num">03</span>
           <div class="work-icon"><img src="assets/icon-cardful.png" alt="" loading="lazy"></div>
@@ -160,6 +161,7 @@
       </div>
       <div class="footer-meta">
         <span class="label">© 2026 Cody Ni</span>
+        <span class="label" data-la-time>Los Angeles</span>
         <div class="footer-links">
           <a href="https://www.linkedin.com/in/codyni123" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/codyni123" target="_blank" rel="noopener">GitHub</a>
@@ -167,6 +169,8 @@
       </div>
     </div>
   </footer>
+
+  <div class="cursor-preview" aria-hidden="true"><img alt="" src="assets/red10-table.jpg"></div>
 
   <script src="js/main.js"></script>
 </body>
