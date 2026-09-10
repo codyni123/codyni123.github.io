@@ -14,7 +14,7 @@ GitHub Pages serves the repo root directly.
 - `about.html` / `contact.html` / `resume.html` (experience summary)
 - `css/style.css`: the whole design system
 - `js/main.js`: scroll-reveal animations (IntersectionObserver)
-- `assets/`: app icons, screenshots, favicon, OG image
+- `assets/`: portrait photo (`photo.jpg`), app icons, screenshots, favicon, OG image
 
 ## The apps and their sites
 
@@ -46,10 +46,10 @@ rounded-up estimates so the figures stay true as the apps grow and rarely need e
 
 - **Copy style:** no em dashes. Use a period, a comma, or a colon instead. En dashes appear
   only in year ranges on the Experience page. No italics anywhere.
-- **Add a photo:** save a portrait as `assets/photo.jpg` (portrait orientation, ~800px wide
-  is plenty), then in `index.html` and `about.html` add this line inside the
-  `<div class="polaroid">`, right after the placeholder div:
-  `<img class="photo" src="assets/photo.jpg" alt="Cody Ni">`
+- **Swap the photo:** the portrait is `assets/photo.jpg` (square or portrait, ~800px wide
+  is plenty), referenced from the `<div class="polaroid">` block in `index.html` and
+  `about.html`. Replace the file to change it. The ink placeholder div stays behind the
+  image as the fallback while it loads or if it is ever removed.
 - **Add a project:** copy one of the case-study pages, add a row in `index.html`, add the
   site link to every footer, and wire the "Next project" links so the cycle stays closed.
 
