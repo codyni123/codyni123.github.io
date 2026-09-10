@@ -1,5 +1,5 @@
 /* ============================================================
-   Cody Ni — portfolio
+   Cody Ni, portfolio
    2026 editorial: big type, warm paper, tactile detail
    ============================================================ */
 
@@ -57,7 +57,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* faint paper grain — the tactile detail */
+/* faint paper grain: the tactile detail */
 body::after {
   content: "";
   position: fixed;
@@ -86,7 +86,7 @@ p:last-child { margin-bottom: 0; }
   padding-right: var(--pad);
 }
 
-/* mono label — the site's connective tissue */
+/* mono label: the site's connective tissue */
 .label {
   font-family: var(--font-mono);
   font-size: 11.5px;
@@ -275,7 +275,7 @@ h1 .muted { color: var(--ink-3); }
 
 .hero { position: relative; isolation: isolate; padding-top: clamp(56px, 9vw, 120px); padding-bottom: clamp(40px, 6vw, 80px); }
 
-/* soft warm glow behind the hero — depth without decoration */
+/* soft warm glow behind the hero: depth without decoration */
 .hero::before {
   content: "";
   position: absolute;
@@ -597,7 +597,7 @@ a.tag-link:hover { border-color: var(--ink); color: var(--paper); background: va
   border-top: 1px solid var(--line);
 }
 
-.case-meta dl { display: flex; flex-wrap: wrap; gap: 20px 56px; margin: 0; }
+.case-meta dl { display: flex; flex-wrap: wrap; gap: 20px 44px; margin: 0; }
 
 .case-meta dt { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 7px; }
 
@@ -771,7 +771,7 @@ a.tag-link:hover { border-color: var(--ink); color: var(--paper); background: va
 
 .exp-row .years { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; color: var(--ink-3); white-space: nowrap; }
 
-/* "currently" panel — the page's closing statement */
+/* "currently" panel: the page's closing statement */
 .now-panel {
   margin-top: clamp(64px, 9vw, 120px);
   display: grid;
@@ -899,6 +899,79 @@ a.tag-link:hover { border-color: var(--ink); color: var(--paper); background: va
   }
 }
 
+/* ---------- numbers (proof tiles) ---------- */
+
+.proof { padding-top: clamp(40px, 6vw, 64px); }
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-top: clamp(28px, 4vw, 40px);
+}
+
+.proof .numbers { margin-top: 0; }
+
+.numbers--4 { grid-template-columns: repeat(4, 1fr); }
+
+.number {
+  position: relative;
+  padding: clamp(20px, 2.8vw, 30px) clamp(16px, 2.4vw, 28px) clamp(20px, 2.8vw, 30px) 0;
+}
+
+.number + .number {
+  border-left: 1px solid var(--line-soft);
+  padding-left: clamp(16px, 2.4vw, 28px);
+}
+
+/* same red hairline as the aside cards, so the two strips read as one family */
+.number::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--red);
+  transition: width 0.55s var(--ease-out);
+}
+
+.number:hover::before { width: 100%; }
+
+.n-val {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(28px, 3.6vw, 44px);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+.n-val .star { color: var(--red); font-size: 0.68em; vertical-align: 0.14em; margin-left: 0.06em; }
+
+.n-key {
+  display: block;
+  margin-top: 11px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+/* the opening line of each project row, set in ink */
+.work-copy .hook { color: var(--ink); font-weight: 600; }
+
+/* a real-world metric inside the tag row */
+.tag--stat { color: var(--red); border-color: rgba(194, 64, 47, 0.45); }
+
+/* case header actions: store + site */
+.case-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 860px) {
@@ -914,6 +987,9 @@ a.tag-link:hover { border-color: var(--ink); color: var(--paper); background: va
   .about-grid { grid-template-columns: 1fr; }
   .about-photo { justify-self: start; margin-top: 10px; }
   .now-panel { grid-template-columns: 1fr; align-items: start; }
+  .numbers--4 { grid-template-columns: repeat(2, 1fr); }
+  .numbers--4 .number:nth-child(3) { border-left: 0; padding-left: 0; }
+  .numbers--4 .number:nth-child(n+3) { border-top: 1px solid var(--line-soft); }
 }
 
 @media (max-width: 560px) {
@@ -927,6 +1003,10 @@ a.tag-link:hover { border-color: var(--ink); color: var(--paper); background: va
   .site-nav a { font-size: 13.5px; }
   .case-band .shot:nth-child(3) { display: none; }
   .footer-links { gap: 18px; flex-wrap: wrap; }
+  .numbers { grid-template-columns: repeat(2, 1fr); }
+  .numbers:not(.numbers--4) .number:nth-child(3) { grid-column: 1 / -1; border-left: 0; padding-left: 0; border-top: 1px solid var(--line-soft); }
+  .n-val { font-size: 28px; }
+  .case-actions .btn { padding: 14px 22px; font-size: 16px; }
 }
 
 /* ---------- motion preferences ---------- */
