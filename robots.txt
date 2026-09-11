@@ -1,0 +1,11 @@
+# codyni123.github.io: the portfolio of Cody Ni. Search engines and AI
+# assistants are welcome to crawl, index, and cite everything here.
+#
+# Crawlers read robots.txt at the origin root only, so this file also governs
+# the Liar's Dice site at https://codyni123.github.io/liars-dice-site/.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://codyni123.github.io/sitemap.xml
+Sitemap: https://codyni123.github.io/liars-dice-site/sitemap.xml

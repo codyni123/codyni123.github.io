@@ -42,6 +42,22 @@ rounded-up estimates so the figures stay true as the apps grow and rarely need e
 | 30 languages | Liar's Dice | The App Store listing. |
 | 5.0 stars, all three apps | everywhere | Public App Store pages: Red 10 (3 ratings), Liar's Dice (9), Cardful (1). |
 
+## Search and analytics
+
+- **Google Search Console:** `https://codyni123.github.io/` is a URL-prefix property, verified by
+  the `google-site-verification` meta tag in `index.html` (keep it; removing it drops verification).
+  The three app sites are separate properties in the same Google account. The Liar's Dice site is
+  also covered by this property because it lives under the same origin.
+- **`robots.txt` and `sitemap.xml`** live at the repo root. Crawlers only read robots.txt at the
+  origin root, so this file also governs `/liars-dice-site/` and lists both sitemaps. Add any new
+  page to `sitemap.xml` (the sitemap has no `lastmod` on purpose; a stale date is worse than none).
+- **Google Analytics 4:** property "Cody Ni Portfolio", web stream `G-BJH40EXPVB`, same Google
+  account. The gtag snippet sits in the `<head>` of every page; copy it into any new page.
+  Enhanced measurement is on, so outbound clicks (App Store, app sites, LinkedIn) are tracked
+  as events without extra code.
+- Every page carries a canonical URL, description, Open Graph and Twitter card tags, and a
+  `robots` meta. `index.html` has Person + WebSite JSON-LD, `about.html` a ProfilePage.
+
 ## Editing notes
 
 - **Copy style:** no em dashes. Use a period, a comma, or a colon instead. En dashes appear
@@ -51,7 +67,8 @@ rounded-up estimates so the figures stay true as the apps grow and rarely need e
   `about.html`. Replace the file to change it. The ink placeholder div stays behind the
   image as the fallback while it loads or if it is ever removed.
 - **Add a project:** copy one of the case-study pages, add a row in `index.html`, add the
-  site link to every footer, and wire the "Next project" links so the cycle stays closed.
+  site link to every footer, wire the "Next project" links so the cycle stays closed, and add
+  the new URL to `sitemap.xml`.
 
 The site deliberately hosts no résumé file. The experience page is a summary only.
 
