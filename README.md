@@ -62,10 +62,27 @@ rounded-up estimates so the figures stay true as the apps grow and rarely need e
 
 - **Copy style:** no em dashes. Use a period, a comma, or a colon instead. En dashes appear
   only in year ranges on the Experience page. No italics anywhere.
-- **Swap the photo:** the portrait is `assets/photo.jpg` (square or portrait, ~800px wide
-  is plenty), referenced from the `<div class="polaroid">` block in `index.html` and
-  `about.html`. Replace the file to change it. The ink placeholder div stays behind the
-  image as the fallback while it loads or if it is ever removed.
+- **Swap the photo:** the portrait is `assets/photo.jpg` (currently an 800x1023 JPEG, ~69 KB),
+  referenced from the `<div class="polaroid">` block in `index.html` and `about.html` and from
+  the Person JSON-LD `image` in both. Replace the file and keep the name; no markup changes.
+  Both slots crop with `object-fit: cover` (21:26 on home, 4:5 on About), so a portrait source
+  near 4:5 with the face centered works best. This is how the current file was made (Pillow,
+  800px wide, progressive JPEG, color profile kept):
+
+  ```bash
+  python3 - <<'EOF'
+  from PIL import Image
+  im = Image.open("new.webp")  # the new photo, any format Pillow reads
+  icc = im.info.get("icc_profile")
+  im = im.convert("RGB")
+  im = im.resize((800, round(im.height * 800 / im.width)), Image.LANCZOS)
+  im.save("assets/photo.jpg", quality=86, optimize=True, progressive=True, icc_profile=icc)
+  EOF
+  ```
+
+  The ink placeholder div stays behind the image as the fallback while it loads or if it is
+  ever removed. The OG image (`assets/og.png`) has no photo in it, so it never needs redoing.
+  GitHub Pages caches assets for 10 minutes, so hard-refresh to see a swap right after deploy.
 - **Add a project:** copy one of the case-study pages, add a row in `index.html`, add the
   site link to every footer, wire the "Next project" links so the cycle stays closed, and add
   the new URL to `sitemap.xml`.
