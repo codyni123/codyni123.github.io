@@ -217,6 +217,13 @@ h1 .muted { color: var(--ink-3); }
 .footer-email:hover { color: var(--red-soft); }
 .footer-email:hover .arrow { transform: translate(5px, -5px); }
 
+/* email + LinkedIn side by side; the pill wraps under the email on small screens */
+.footer-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 16px clamp(22px, 3vw, 36px); }
+
+/* ghost pill on the dark footer: the light ghost button, inverted */
+.site-footer .btn--ghost { color: var(--paper); border-color: rgba(240, 238, 233, 0.24); }
+.site-footer .btn--ghost:hover { background: var(--paper); border-color: var(--paper); color: var(--ink); }
+
 .footer-meta {
   display: flex;
   flex-wrap: wrap;
@@ -1006,7 +1013,7 @@ a.tag-link:hover { border-color: var(--ink); color: var(--paper); background: va
   .numbers { grid-template-columns: repeat(2, 1fr); }
   .numbers:not(.numbers--4) .number:nth-child(3) { grid-column: 1 / -1; border-left: 0; padding-left: 0; border-top: 1px solid var(--line-soft); }
   .n-val { font-size: 28px; }
-  .case-actions .btn { padding: 14px 22px; font-size: 16px; }
+  .case-actions .btn, .footer-contact .btn { padding: 14px 22px; font-size: 16px; }
 }
 
 /* ---------- motion preferences ---------- */
