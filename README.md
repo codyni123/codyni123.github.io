@@ -62,7 +62,7 @@ rounded-up estimates so the figures stay true as the apps grow and rarely need e
 
 - **Copy style:** no em dashes. Use a period, a comma, or a colon instead. En dashes appear
   only in year ranges on the Experience page. No italics anywhere.
-- **Swap the photo:** the portrait is `assets/photo.jpg` (currently an 800x1023 JPEG, ~72 KB),
+- **Swap the photo:** the portrait is `assets/photo.jpg` (currently an 800x1023 JPEG, ~74 KB),
   referenced from the `<div class="polaroid">` block in `index.html` and `about.html` and from
   the Person JSON-LD `image` in both. Replace the file and keep the name; no markup changes.
   Both slots crop with `object-fit: cover` (21:26 on home, 4:5 on About), so a portrait source
